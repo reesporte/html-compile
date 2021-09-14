@@ -15,11 +15,9 @@ $ go get -u github.com/reesporte/html-compile
 $ go install github.com/reesporte/html-compile@latest
 ```
 ## How to use 
-2. Set up a directory with an `index.html` file.
-
-3. Then, to create a component, make a `COMPONENT.html` file and put it in a `components` directory which is on the same level as your `index.html`. Then, to use your component, put the tag `<app-COMPONENT/>` in your `index.html` file where you want to use the component. 
-
-4. To compile your HTML, just run `html-compile --in <directory of index.html>`.
+1. Set up a directory with an `index.html` file.
+2. Then, to create a component, make a `COMPONENT.html` file and put it in a `components` directory which is on the same level as your `index.html`. Then, to use your component, put the tag `<app-COMPONENT/>` in your `index.html` file where you want to use the component. 
+3. To compile your HTML, just run `html-compile --in <directory of index.html>`.
 
 To prettify existing HTML inplace, run `html-compile --prettify <html file to prettify> --out <directory of file>`. So if you were prettifying a file in the current directory, you could run `html-compile --prettify file.html --out .`.
 
