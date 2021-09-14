@@ -1,4 +1,4 @@
-module github.org/reesporte/html-compile
+module github.com/reesporte/html-compile
 
 go 1.17
 
