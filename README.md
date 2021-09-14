@@ -1,4 +1,4 @@
-# html-compile
+#html-compile
 `html-compile` is a dead simple html component translating compiler that lets you write modular components, but in vanilla html / js / css! 
 
 If it finds a self-closing tag with the label "app-", it attempts to replace that tag with the HTML file with the same name. Comments are not included in the compiled file.
@@ -10,7 +10,7 @@ If it finds a self-closing tag with the label "app-", it attempts to replace tha
 `html-compile` follows the simple philosophy of do two things and do them good enough.
 
 ## How to use 
-1. Install the cli: `go get github.com/reesporte/html-compile`
+1. Install the cli: `go install github.com/reesporte/html-compile@latest`
 
 2. Set up a directory with an `index.html` file.
 
