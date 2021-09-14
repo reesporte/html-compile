@@ -9,9 +9,12 @@ If it finds a self-closing tag with the label "app-", it attempts to replace tha
 
 `html-compile` follows the simple philosophy of do two things and do them good enough.
 
+## Installation
+```
+$ go get -u github.com/reesporte/html-compile
+$ go install github.com/reesporte/html-compile@latest
+```
 ## How to use 
-1. Install the cli: `go install github.com/reesporte/html-compile@latest`
-
 2. Set up a directory with an `index.html` file.
 
 3. Then, to create a component, make a `COMPONENT.html` file and put it in a `components` directory which is on the same level as your `index.html`. Then, to use your component, put the tag `<app-COMPONENT/>` in your `index.html` file where you want to use the component. 
