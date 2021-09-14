@@ -1,13 +1,7 @@
 # html-compile
 `html-compile` is a dead simple HTML component translating compiler that lets you write modular components, but in vanilla HTML / JS / CSS! 
 
-If it finds a self-closing tag with the label "app-", it attempts to replace that tag with the HTML file with the same name. Comments are not included in the compiled file.
-
-`html-compile` will copy all HTML, CSS, and JS files from the input directory, and recursively copy all directories in the input directory named "html", "js", or "css" to the output directory.
-
-`html-compile` can also be used to prettify existing HTML, but won't fix HTML errors, just make existing HTML have consistent indentation. 
-
-`html-compile` follows the simple philosophy of do two things and do them good enough.
+If it finds a self-closing tag with the label "app-", it attempts to replace that tag with the HTML file with the same name. Comments are not included in the compiled file. It will copy all HTML, CSS, and JS files from the input directory, and recursively copy all directories in the input directory named "html", "js", or "css" to the output directory. It can also be used to prettify existing HTML, but won't fix HTML errors, just make existing HTML have consistent indentation. 
 
 ## Installation
 ```
@@ -20,5 +14,4 @@ $ go install github.com/reesporte/html-compile@latest
 3. To compile your HTML, just run `html-compile --in <directory of index.html>`.
 
 To prettify existing HTML inplace, run `html-compile --prettify <html file to prettify> --out <directory of file>`. So if you were prettifying a file in the current directory, you could run `html-compile --prettify file.html --out .`.
-
 
