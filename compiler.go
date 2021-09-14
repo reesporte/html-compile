@@ -90,7 +90,7 @@ func CopyDirectory(src, dst string) error {
 // voidToken checks if the token is a void element as defined https://www.w3.org/TR/2011/WD-html-markup-20110113/syntax.html#syntax-elements
 func voidToken(token string) bool {
 	for _, tok := range []string{"area", "base", "br", "col", "command", "embed", "hr", "img", "input", "keygen", "link", "meta", "param", "source", "track", "wbr"} {
-		if token[1:len(token)-1] == tok {
+		if token == tok {
 			return true
 		}
 	}
@@ -153,7 +153,7 @@ func PrettifyHtml(f io.Reader, fname, outputDir string) {
 
 		if strings.TrimSpace(tok.String()) != "" {
 
-			if tt == html.StartTagToken && tt != html.EndTagToken && !voidToken(tok.String()) {
+			if tt == html.StartTagToken && tt != html.EndTagToken && !voidToken(strings.ToLower(tok.DataAtom.String())) {
 				tags.Push(tok.DataAtom)
 				indentationLevel++
 			} else if tt == html.EndTagToken && tok.DataAtom == tags.Peek() {

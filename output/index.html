@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="David Porter has been a practicing attorney for over 20 years and serves as a Circuit Civil mediator in the Central Florida area. The majority of his career has been in litigation representing both plaintiffs and defendants in a variety of matters. Areas of experience include: negligence, real property, homeowner’s associations, contracts, and collections.">
+        <link rel="icon" type="image/jpeg" href="./assets/img/favicon.jpg">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js">
+        </script>
+        <title>
+            David W. Porter, J.D.
+        </title>
+    </head>
+    <body>
+        <div class="container">
+            <span class="name">
+                <a href="/">
+                    <h1 style="float: inline-end left;">
+                        David W. Porter, J.D.
+                        <img src="./assets/img/justice.png" alt="scales of justice" style="max-width: 5%; height:auto;">
+                    </h1>
+                </a>
+                <h3>
+                    Experienced attorney and certified circuit court mediator.
+                </h3>
+            </span>
+            <div class="modal" id="success-modal">
+                <div class="modal-content" style="margin: 15% auto;">
+                    <button class="bbutton" onclick="toggleCollapsed(&#39;success-modal&#39;)">
+                        X
+                    </button>
+                    <h3 style="text-align: center;">
+                        Success! You will receive an email to confirm your mediation.
+                    </h3>
+                </div>
+            </div>
+            <div class="modal" id="error-modal">
+                <div class="modal-content" style="margin: 15% auto;">
+                    <button class="bbutton" onclick="toggleCollapsed(&#39;error-modal&#39;)">
+                        X
+                    </button>
+                    <h3 style="text-align: center;">
+                        There was a problem submitting your form. If the issue continues, please
+                        <a href="mailto:portermediation@gmail.com">
+                            contact me
+                        </a>
+                        directly.
+                    </h3>
+                </div>
+            </div>
+            <div id="bookModal" class="modal">
+                <div class="modal-content">
+                    <button class="bbutton" onclick="toggleCollapsed(&#39;bookModal&#39;)">
+                        X
+                    </button>
+                    <form id="booking-form">
+                        <h1>
+                            Schedule a mediation:
+                        </h1>
+                        <label for="mediation-location">
+                            Mediation location:
+                        </label>
+                        <select name="mediation-location" id="mediation-location" required="">
+                            <option value="virtual">
+                                Virtual
+                            </option>
+                            <option value="in-person">
+                                In person
+                            </option>
+                        </select>
+                        <span id="in-person-location-div" class="in-person-location-div">
+                            <label for="in-person-location">
+                                Desired mediation location:
+                            </label>
+                            <input type="text" name="in-person-location" id="in-person-location">
+                        </span>
+                        <label for="date-requested">
+                            Date Requested:
+                        </label>
+                        <input type="date" id="date-requested" name="date-requested" required="">
+                        <label for="time">
+                            Start Time:
+                        </label>
+                        <input type="time" id="time" name="time" required="">
+                        <label for="period">
+                            Select Period:
+                        </label>
+                        <select name="period" id="period" required="">
+                            <option value="">
+                            </option>
+                            <option value="morning">
+                                Morning
+                            </option>
+                            <option value="afternoon">
+                                Afternoon
+                            </option>
+                            <option value="all">
+                                All day
+                            </option>
+                        </select>
+                        <label for="name">
+                            Your full name:
+                        </label>
+                        <input type="text" id="name" name="name" required="">
+                        <label for="behalf">
+                            On behalf of attorney:
+                        </label>
+                        <input type="text" name="behalf" id="behalf" required="">
+                        <label for="organization">
+                            Your firm/organization:
+                        </label>
+                        <input type="text" name="organization" id="organization" required="">
+                        <label for="street-address">
+                            Street Address:
+                        </label>
+                        <input type="text" name="street-address" id="street-address" required="">
+                        <label for="city">
+                            City:
+                        </label>
+                        <input type="text" name="city" id="city" required="">
+                        <label for="state">
+                            State:
+                        </label>
+                        <select name="state" id="state" required="">
+                            <option value="">
+                            </option>
+                            <option value="AL">
+                                Alabama
+                            </option>
+                            <option value="AK">
+                                Alaska
+                            </option>
+                            <option value="AZ">
+                                Arizona
+                            </option>
+                            <option value="AR">
+                                Arkansas
+                            </option>
+                            <option value="CA">
+                                California
+                            </option>
+                            <option value="CO">
+                                Colorado
+                            </option>
+                            <option value="CT">
+                                Connecticut
+                            </option>
+                            <option value="DE">
+                                Delaware
+                            </option>
+                            <option value="DC">
+                                District Of Columbia
+                            </option>
+                            <option value="FL">
+                                Florida
+                            </option>
+                            <option value="GA">
+                                Georgia
+                            </option>
+                            <option value="HI">
+                                Hawaii
+                            </option>
+                            <option value="ID">
+                                Idaho
+                            </option>
+                            <option value="IL">
+                                Illinois
+                            </option>
+                            <option value="IN">
+                                Indiana
+                            </option>
+                            <option value="IA">
+                                Iowa
+                            </option>
+                            <option value="KS">
+                                Kansas
+                            </option>
+                            <option value="KY">
+                                Kentucky
+                            </option>
+                            <option value="LA">
+                                Louisiana
+                            </option>
+                            <option value="ME">
+                                Maine
+                            </option>
+                            <option value="MD">
+                                Maryland
+                            </option>
+                            <option value="MA">
+                                Massachusetts
+                            </option>
+                            <option value="MI">
+                                Michigan
+                            </option>
+                            <option value="MN">
+                                Minnesota
+                            </option>
+                            <option value="MS">
+                                Mississippi
+                            </option>
+                            <option value="MO">
+                                Missouri
+                            </option>
+                            <option value="MT">
+                                Montana
+                            </option>
+                            <option value="NE">
+                                Nebraska
+                            </option>
+                            <option value="NV">
+                                Nevada
+                            </option>
+                            <option value="NH">
+                                New Hampshire
+                            </option>
+                            <option value="NJ">
+                                New Jersey
+                            </option>
+                            <option value="NM">
+                                New Mexico
+                            </option>
+                            <option value="NY">
+                                New York
+                            </option>
+                            <option value="NC">
+                                North Carolina
+                            </option>
+                            <option value="ND">
+                                North Dakota
+                            </option>
+                            <option value="OH">
+                                Ohio
+                            </option>
+                            <option value="OK">
+                                Oklahoma
+                            </option>
+                            <option value="OR">
+                                Oregon
+                            </option>
+                            <option value="PA">
+                                Pennsylvania
+                            </option>
+                            <option value="RI">
+                                Rhode Island
+                            </option>
+                            <option value="SC">
+                                South Carolina
+                            </option>
+                            <option value="SD">
+                                South Dakota
+                            </option>
+                            <option value="TN">
+                                Tennessee
+                            </option>
+                            <option value="TX">
+                                Texas
+                            </option>
+                            <option value="UT">
+                                Utah
+                            </option>
+                            <option value="VT">
+                                Vermont
+                            </option>
+                            <option value="VA">
+                                Virginia
+                            </option>
+                            <option value="WA">
+                                Washington
+                            </option>
+                            <option value="WV">
+                                West Virginia
+                            </option>
+                            <option value="WI">
+                                Wisconsin
+                            </option>
+                            <option value="WY">
+                                Wyoming
+                            </option>
+                        </select>
+                        <label for="phone">
+                            Phone:
+                        </label>
+                        <input type="tel" id="phone" name="phone" required="">
+                        <label for="email">
+                            Email:
+                        </label>
+                        <input type="email" id="email" name="email" required="">
+                        <label for="representing">
+                            Your firm represents:
+                        </label>
+                        <select name="representing" id="representing">
+                            <option value="">
+                            </option>
+                            <option value="plaintiff">
+                                Plaintiff
+                            </option>
+                            <option value="defense">
+                                Defense
+                            </option>
+                            <option value="na">
+                                Not applicable
+                            </option>
+                        </select>
+                        <label for="case-name">
+                            Name of case:
+                        </label>
+                        <input type="text" id="case-name" name="case-name" required="">
+                        <br>
+                        <button class="abutton">
+                            Submit
+                        </button>
+                    </form>
+                    <script>
+                        var form = document.getElementById("booking-form");
+                    async function handleSubmit(event) {
+                        event.preventDefault();
+                        var data = new FormData(event.target);
+                        fetch("https://formspree.io/f/mjvjoyok", {
+                            method: "POST",
+                            body: data,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        }).then(response => {
+                            form.reset()
+                            toggleCollapsed('bookModal')
+                            toggleCollapsed('success-modal')
+                        }).catch(error => {
+                            console.log(error)
+                            toggleCollapsed('bookModal')
+                            toggleCollapsed('error-modal')
+                        });
+                    }
+                    form.addEventListener("submit", handleSubmit);
+
+                    document.getElementById('mediation-location').addEventListener('input', (event) => {
+                        const location_div = document.getElementById('in-person-location-div');
+                        if (event.target.value === "in-person") {
+                            location_div.style.display = "block";
+                        } else {
+                            location_div.style.display = "none";
+                        }
+                    });
+                    </script>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="chunk-content">
+                    <div>
+                        <h1>
+                            Florida Circuit Court Mediation
+                        </h1>
+                        <button class="abutton" onclick="toggleCollapsed(&#39;bookModal&#39;)">
+                            Book a mediation
+                        </button>
+                    </div>
+                    <div class="chunk-content-child" style="float: left; width: 25%;">
+                        <img src="./assets/img/profile.jpg" alt="David Porter headshot" style="width: 100%;">
+                    </div>
+                    <div class="chunk-content-child">
+                        <p>
+                            David has been a practicing attorney for over 20 years and serves as a Circuit Civil mediator in
+                        the Central Florida area. The majority of his career has been in litigation representing both
+                        plaintiffs and defendants in a variety of matters. Areas of experience include: negligence, real
+                        property, homeowner’s associations, contracts, and collections.
+                        </p>
+                        <p>
+                            Please
+                            <a href="mailto:portermediation@gmail.com">
+                                contact me
+                            </a>
+                            for rate information.
+                        </p>
+                    </div>
+                </div>
+                <div class="chunk-content calendar">
+                    <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=cG9ydGVybWVkaWF0aW9uQGdtYWlsLmNvbQ&amp;color=%23039BE5&amp;showNav=1&amp;showTitle=0&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0" style="border:solid 1px #777" width="100%" height="100%" frameborder="0" scrolling="no">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
