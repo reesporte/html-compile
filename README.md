@@ -1,11 +1,11 @@
-#html-compile
-`html-compile` is a dead simple html component translating compiler that lets you write modular components, but in vanilla html / js / css! 
+# html-compile
+`html-compile` is a dead simple HTML component translating compiler that lets you write modular components, but in vanilla HTML / js / css! 
 
 If it finds a self-closing tag with the label "app-", it attempts to replace that tag with the HTML file with the same name. Comments are not included in the compiled file.
 
 `html-compile` will copy all HTML, CSS, and JS files from the input directory, and recursively copy all directories in the input directory named "html", "js", or "css" to the output directory.
 
-`html-compile` can also be used to prettify existing HTML, but won't fix HTML errors, just make existing html have consistent indentation. 
+`html-compile` can also be used to prettify existing HTML, but won't fix HTML errors, just make existing HTML have consistent indentation. 
 
 `html-compile` follows the simple philosophy of do two things and do them good enough.
 
